@@ -20,32 +20,11 @@
     </head>
     <body id="page-top">
 
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-      
-
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">國立頭城高級家事商業職業學校</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-
-
-        </nav>
-
-
         <style>
-        
         #video {
             position:relative;
             background-color: black;
-            height: 90vh;
+            height: 80vh;
             min-height: 25rem;
             width: 100%;
             overflow: hidden;
@@ -69,7 +48,7 @@
         .overlay {
             position: absolute;
             background-color: black;
-            opacity: 0.5;
+            opacity: 0.4;
             z-index: 1;
             top:0;
             bottom:0;
@@ -83,36 +62,137 @@
             cursor: pointer;
         }
 
+        nav {
+            position: fixed;
+            top:0;
+            min-width: 240px;
+            left:50%;
+            margin-left:-420px;
+            margin-top: 50px;
+            line-height: 60px;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            overflow: hidden;
+            color: #000000;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+            padding-right: 40px;
+            transition: 1s;
+        }
+
+        nav.black ul {
+            background: #fff;
+        }
+
+        nav ul li {
+            display: inline-block;
+            
+            line-height: 30px;
+            padding: 16px 40px;;
+        }
+
+        nav ul li a {
+            font-family: Microsoft JhengHei;
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .menu-icon {
+            line-height: 60px;
+            width: 100%;
+            background: #000;
+            text-align: right;
+            box-sizing: border-box;
+            padding: 15px 24px;
+            cursor: pointer;
+            color: #fff;
+            display: none;
+        }
+
+        @media(max-width: 786px) {
+
+            .logo {
+                    position: fixed;
+                    top: 0;
+                    margin-top: 16px;
+            }
+
+            nav ul {
+                    max-height: 0px;
+                    background: #000;
+            }
+
+            nav.black ul {
+                    background: #000;
+            }
+
+            .showing {
+                    max-height: 34em;
+            }
+
+            nav ul li {
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 24px;
+                    text-align: center;
+            }
+
+            .menu-icon {
+                    display: block;
+            }
+
+        }
+
+        .vodeo_body{
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            margin-left: -251px;
+            z-index: 2;
+        }
+    
+
         </style>
 
 
 
         <section id="video">
+
+            <nav>
+                <div class="menu-icon">
+                    <i class="fa fa-bars fa-2x"></i>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">認識頭家</a></li>
+                        <li><a href="#">行政單位</a></li>
+                        <li><a href="#">教學單位</a></li>
+                        <li><a href="#">相關單位</a></li>
+                        <li><a href="#">優質化&完全免試</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="vodeo_body">
+                <img src="http://www1.chu.edu.tw/var/file/0/1000/randimg/mobilead_367_5713287_62366.png" class="img-responsive">
+            </div>
+
             <div class="overlay">
             </div>
             <video playsinline="playsinline" autoplay="autoplay" muted="muted" poster="./assets/img/bg-masthead.jpg">
-              <source src="./videos/tcvs01.mp4" type="video/mp4">
+                <source src="./videos/tcvs01.mp4" type="video/mp4">
             </video>
         </section>
 
 
 
 
-
-
-        <section class="page-section bg-primary" id="about">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">We've got what you need!</h2>
-                        <hr class="divider light my-4" />
-                        <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
-                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
                 <h2 class="text-center mt-0">At Your Service</h2>
